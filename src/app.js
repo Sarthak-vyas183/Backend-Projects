@@ -12,4 +12,10 @@ app.use(cors({
     credentials : true
 }))
 
+app.get("/" , (req , res) => {
+    res.send("hey");
+})
+
+app.listen(3000);
+
 export default app ;
