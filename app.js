@@ -12,10 +12,12 @@ app.use(cors({
     credentials : true
 }))
 
-app.get("/" , (req , res) => {
-    res.send("hey");
-})
+// router import 
+import userRouter from "./src/routes/user.routes.js";
 
-app.listen(3000);
+//route declaration 
+app.use("/api/v1/user" , userRouter)
+
+
 
 export default app ;
